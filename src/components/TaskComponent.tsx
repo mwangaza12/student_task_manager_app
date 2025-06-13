@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import type { Todo, FilterType } from '../types/types';
 import { HeaderComponent } from './HeaderComponent';
 
+const InitialTodos = [
+    { id: 1, text: 'Complete online JavaScript course', completed: true },
+    { id: 2, text: 'Jog around the park 3x', completed: false },
+    { id: 3, text: '10 minutes meditation', completed: false },
+    { id: 4, text: 'Read for 1 hour', completed: false },
+    { id: 5, text: 'Pick up groceries', completed: false },
+    { id: 6, text: 'Complete Todo App on Frontend Mentor', completed: false },
+];
+
 
 const TodoApp: React.FC = () => {
-    const [todos, setTodos] = useState<Todo[]>([
-            { id: 1, text: 'Complete online JavaScript course', completed: true },
-            { id: 2, text: 'Jog around the park 3x', completed: false },
-            { id: 3, text: '10 minutes meditation', completed: false },
-            { id: 4, text: 'Read for 1 hour', completed: false },
-            { id: 5, text: 'Pick up groceries', completed: false },
-            { id: 6, text: 'Complete Todo App on Frontend Mentor', completed: false },
-    ]);
+    const [todos, setTodos] = useState<Todo[]>(InitialTodos);
     const [newTodo, setNewTodo] = useState('');
     const [filter, setFilter] = useState<FilterType>('All');
 
