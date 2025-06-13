@@ -68,7 +68,7 @@ body {
   margin-bottom: 24px;
 }
 
-.todo-input {
+.todo-input, .todo-edit-input {
   width: 100%;
   padding: 20px 24px;
   background: #25273d;
@@ -175,12 +175,49 @@ body {
   transition: all 0.2s;
 }
 
-.todo-item:hover .delete-button {
+.edit-button {
+  background: none;
+  border: none;
+  color: #4d5067;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.todo-item:hover .delete-button,
+.todo-item:hover .edit-button {
   opacity: 1;
 }
 
 .delete-button:hover {
   color: #e74d89;
+}
+
+.btn{
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.save-button{
+  color: green;
+}
+.cancel-button{
+  color: red;
 }
 
 .todo-footer {
