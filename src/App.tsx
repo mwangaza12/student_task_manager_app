@@ -1,16 +1,13 @@
 
 import './App.css'
-import TodoApp from './components/TaskComponent'
+import {TaskComponent} from './components/TaskComponent'
 
 function App() {
 
   return (
-    <>
     <div className='container'>
-      <TodoApp /> 
+      <TaskComponent /> 
     </div>
-     
-    </>
   )
 }
 

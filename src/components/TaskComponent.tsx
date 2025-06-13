@@ -12,7 +12,7 @@ const InitialTodos = [
 ];
 
 
-const TodoApp: React.FC = () => {
+export const TaskComponent: React.FC = () => {
     const [todos, setTodos] = useState<Todo[]>(InitialTodos);
     const [newTodo, setNewTodo] = useState('');
     const [filter, setFilter] = useState<FilterType>('All');
@@ -115,5 +115,3 @@ const TodoApp: React.FC = () => {
         </div>
     );
 };
-
-export default TodoApp;
